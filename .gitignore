@@ -1,10 +1,2 @@
-# API key lokal - jangan pernah commit
 js/config.js
-
-# Editor / OS
 .vscode/
-.DS_Store
-Thumbs.db
-
-# Optional local files
-*.local.js
