@@ -1,7 +1,5 @@
 # Manual Testing Checklist — Fase 6
 
-Gunakan checklist ini sebelum presentasi/deployment.
-
 ## To-do
 
 - [ ] Tambah tugas valid

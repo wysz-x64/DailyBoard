@@ -110,13 +110,3 @@ API key OpenWeather tetap dapat terlihat oleh browser setelah aplikasi online ka
 
 Jika API key pernah terlanjur masuk ke repository publik atau riwayat Git, sebaiknya buat/ganti key tersebut sebelum deployment.
 
-## Fase 6
-
-Implementasi fase 6 pada project:
-
-- Refactoring menjadi beberapa ES Module.
-- Utility umum dipisahkan ke `utils.js`.
-- Debounce diterapkan pada pencarian.
-- Manual testing didokumentasikan di `TESTING.md`.
-- Deployment disiapkan menggunakan GitHub Pages + GitHub Actions.
-- Responsiveness tidak ditambahkan sebagai perubahan baru karena tampilan yang ada sudah diuji pada perangkat mobile sesuai keputusan project.

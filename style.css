@@ -128,14 +128,36 @@ textarea:focus {
 
 .dark-mode input,
 .dark-mode textarea {
-  background: #171717;
+  background: #2a2a2a;
   color: #f5f5f5;
-  border-color: #262626;
+  border-color: #404040;
 }
 
 .dark-mode input:focus,
 .dark-mode textarea:focus {
   border-color: #ffffff;
+}
+
+.dark-mode .tugas-item {
+  background: #2a2a2a;
+  border-color: #404040;
+}
+
+.dark-mode .catatan-item {
+  background: #2a2a2a;
+  border-color: #404040;
+}
+
+.dark-mode #kutipan-harian {
+  background: #2a2a2a;
+  border-color: #404040;
+  color: #d4d4d4;
+}
+
+.dark-mode .weather-main,
+.dark-mode .weather-detail {
+  background: #2a2a2a;
+  border-color: #404040;
 }
 
 textarea {
