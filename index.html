@@ -52,9 +52,16 @@
 
   <div class="right-column">
     <section class="card">
-      <h2>Kutipan Hari Ini</h2>
-      <p id="kutipan-harian">Memuat kutipan...</p>
-      <p id="status-kutipan" class="status"></p>
+    <div class="card-header-flex">
+        <h2>Kutipan Hari Ini</h2>
+        <button id="refresh-kutipan" class="btn-sm">Refresh</button>
+    </div>
+
+    <div id="kutipan-harian">
+        Memuat kutipan...
+    </div>
+
+    <p id="status-kutipan" class="status"></p>
     </section>
 
     <section class="card weather-card">

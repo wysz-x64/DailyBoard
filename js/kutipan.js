@@ -1,5 +1,6 @@
 const kutipanElement = document.getElementById("kutipan-harian");
 const statusKutipan = document.getElementById("status-kutipan");
+const refreshKutipan = document.getElementById("refresh-kutipan");
 
 async function ambilKutipan() {
   try {
@@ -30,5 +31,6 @@ async function ambilKutipan() {
     statusKutipan.textContent = error.message;
   }
 }
+refreshKutipan.addEventListener("click", ambilKutipan);
 
 export { ambilKutipan };
