@@ -9,11 +9,11 @@ const refreshCuaca = document.getElementById("refresh-cuaca");
 
 async function ambilCuaca(kota = DEFAULT_CITY) {
   try {
-    // FLOW 1: Tampilkan status loading sebelum request.
+    // Tampilkan status loading sebelum request.
     infoCuaca.textContent = "Mengambil data cuaca...";
     statusCuaca.textContent = "";
 
-    // FLOW 2: Susun endpoint berdasarkan kota dan API key.
+    // Susun endpoint berdasarkan kota dan API key.
     const url =
       "https://api.openweathermap.org/data/2.5/weather" +
       `?q=${encodeURIComponent(kota)}` +
@@ -21,17 +21,17 @@ async function ambilCuaca(kota = DEFAULT_CITY) {
       "&units=metric" +
       "&lang=id";
 
-    // FLOW 3: Kirim request asynchronous.
+    // Kirim request asynchronous.
     const response = await fetch(url);
 
-    // FLOW 4: Periksa status HTTP sebelum membaca data.
+    // Periksa status HTTP sebelum membaca data.
     if (!response.ok) {
       throw new Error(
         "Gagal mengambil cuaca. Periksa nama kota atau API key."
       );
     }
 
-    // FLOW 5: Parse response dan ambil bagian weather yang diperlukan.
+    // Parse response dan ambil bagian weather yang diperlukan.
     const data = await response.json();
     const cuaca = data.weather[0];
 
@@ -41,7 +41,7 @@ async function ambilCuaca(kota = DEFAULT_CITY) {
     const iconUrl =
       `https://openweathermap.org/img/wn/${cuaca.icon}@2x.png`;
 
-    // FLOW 6: Tampilkan data API ke DOM.
+    // Tampilkan data API ke DOM.
     infoCuaca.innerHTML = `
       <div class="weather-main">
         <img
@@ -71,11 +71,11 @@ async function ambilCuaca(kota = DEFAULT_CITY) {
       </div>
     `;
 
-    // FLOW 7: Tampilkan waktu request berhasil.
+    // Tampilkan waktu request berhasil.
     statusCuaca.textContent =
       `Terakhir diperbarui: ${new Date().toLocaleTimeString("id-ID")}`;
   } catch (error) {
-    // FLOW ERROR: tampilkan fallback tanpa menghentikan modul lain.
+    // Tampilkan fallback tanpa menghentikan modul lain.
     weatherLocation.textContent = "Cuaca tidak tersedia";
     infoCuaca.textContent = error.message;
     statusCuaca.textContent = "";
@@ -83,7 +83,7 @@ async function ambilCuaca(kota = DEFAULT_CITY) {
 }
 
 function initCuaca() {
-  // FLOW 1: Ambil kota terakhir, atau gunakan kota default.
+  // Ambil kota terakhir, atau gunakan kota default.
   const kotaTersimpan =
     localStorage.getItem("kotaCuaca") || DEFAULT_CITY;
 

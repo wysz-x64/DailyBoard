@@ -1,10 +1,3 @@
-/*
-CATATAN.JS
-Mengelola fitur catatan cepat.
-FLOW UTAMA:
-form -> validasi -> array -> localStorage -> render
-*/
-
 import { validasiInput } from "./utils.js";
 
 let daftarCatatan = [];

@@ -108,7 +108,6 @@ function renderTugas() {
     tombolHapus.className = "btn-hapus";
     tombolHapus.textContent = "Hapus";
 
-    // FLOW HAPUS: click -> hapus berdasarkan ID.
     tombolHapus.addEventListener("click", () => hapusTugas(tugas.id));
 
     // FLOW DRAG START: simpan ID tugas yang sedang dipindahkan.
